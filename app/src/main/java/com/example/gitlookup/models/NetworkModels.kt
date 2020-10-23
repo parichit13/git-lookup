@@ -26,9 +26,12 @@ data class GithubUser(
 data class GithubRepo(
     val id: Int?,
     val name: String?,
-    @SerializedName("full_name")
-    val fullName: String?,
     @SerializedName("html_url")
     val url: String?,
-    val description: String?
+    val description: String?,
+    val language: String?,
+    @SerializedName("forks_count")
+    val forkCount: Int?,
+    @SerializedName("stargazers_count")
+    val starCount: Int?
 )

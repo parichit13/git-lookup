@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "GIt Lookup"
+rootProject.name = "Git Lookup"

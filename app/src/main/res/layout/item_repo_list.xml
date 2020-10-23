@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp"
+        tools:text="Repo Name" />
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/design_default_color_secondary_variant"
+        tools:text="https://github.com/octocat/Hello-World"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/lorem_ipsum_description"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <LinearLayout
+        android:id="@+id/secondaryInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            tools:text="Java"
+            app:drawableStartCompat="@drawable/ic_white_circle"
+            android:drawablePadding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:drawableTint="@color/design_default_color_secondary" />
+
+        <TextView
+            android:id="@+id/stars"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:drawablePadding="4dp"
+            tools:text="5 stars"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:drawableStartCompat="@drawable/ic_star_gold" />
+
+        <TextView
+            android:id="@+id/forks"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:drawablePadding="4dp"
+            tools:text="9 Forks"
+            app:drawableStartCompat="@drawable/ic_forks_blue" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

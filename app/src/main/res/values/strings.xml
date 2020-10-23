@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GIt Lookup</string>
+    <string name="app_name">Git Lookup</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,4 +9,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="search_hint">Enter a username</string>
+    <string name="search">Search</string>
+    <string name="lorem_ipsum_description">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
 </resources>
