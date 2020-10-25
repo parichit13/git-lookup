@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#201B2B"
     android:layout_height="match_parent"
-    tools:context=".modules.main.SearchFragment">
+    android:background="@color/dark_background"
+    tools:context=".modules.main.search.SearchFragment">
 
     <ImageView
         android:id="@+id/logo"
@@ -13,18 +13,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:src="@drawable/binoculars"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="38sp"
-        android:textColor="#FFFFFF"
         android:layout_marginTop="20dp"
         android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
@@ -32,20 +32,21 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/searchInput"
         android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:padding="20dp"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:maxLines="1"
+        android:elevation="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_borders"
+        android:hint="@string/search_hint"
         android:inputType="text"
+        android:maxLines="1"
+        android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="#D3D3D3"
-        android:layout_height="wrap_content"
-        android:hint="@string/search_hint"
         android:textSize="16sp"
-        android:background="@drawable/rounded_borders" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
 
     <Button
@@ -61,13 +62,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchInput" />
 
-    <androidx.core.widget.ContentLoadingProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintCircleRadius="16dp"
-        android:indeterminate="true" />
+    <include
+        android:id="@+id/loader"
+        layout="@layout/full_screen_loader_layout"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

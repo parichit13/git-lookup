@@ -12,4 +12,5 @@
     <string name="search_hint">Enter a username</string>
     <string name="search">Search</string>
     <string name="lorem_ipsum_description">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
+    <string name="public_repos">Public Repos:</string>
 </resources>

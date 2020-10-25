@@ -3,13 +3,13 @@ package com.example.gitlookup.models
 import com.google.gson.annotations.SerializedName
 
 sealed class Result<out T> {
-    class Success<out T>(val data: T?) : Result<T>()
+    class Success<out T>(val data: T) : Result<T>()
     class Error(val error: Exception) : Result<Nothing>()
 }
 
 data class GithubUser(
-    val id: Int?,
-    val login: String?,
+    val id: Int,
+    val login: String,
     @SerializedName("avatar_url")
     val avatarUrl: String?,
     val name: String?,
@@ -18,7 +18,7 @@ data class GithubUser(
     val email: String?,
     val bio: String?,
     @SerializedName("public_repos")
-    val publicRepos: String?,
+    val publicRepos: Int?,
     val followers: Int?,
     val following: Int?
 )
