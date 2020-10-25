@@ -96,7 +96,7 @@ class DetailsFragment : Fragment() {
                 circleCrop = true
             )
             name?.applyText(user.name)
-            username?.applyText(user.login)
+            username?.applyText("@${user.login}")
             email?.applyText(user.email)
             profileBio?.applyText(user.bio)
             followerCount?.applyText(user.followers?.toString())
